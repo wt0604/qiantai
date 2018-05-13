@@ -25,4 +25,20 @@ public class WtServiceImpl  implements WtService{
     public List<Member> queryMemberAll(Member member) {
         return wtDao.queryMemberAll(member);
     }
+
+    public void delMember(String ids) {
+        wtDao.delMember(ids);
+    }
+
+    public Member getMemberById(Integer id) {
+        return wtDao.getMemberById(id);
+    }
+
+    public void modifyMember(Member member) {
+        wtDao.modifyMember(member);
+    }
+
+    public void addMember(Member member) {
+        wtDao.addMember(member);
+    }
 }

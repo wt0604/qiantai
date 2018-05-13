@@ -23,4 +23,35 @@
     <select id="queryMemberAll" resultMap="member">
         select * from t_member m  where 1=1
     </select>
+    <delete id="delMember" >
+        delete from t_member where memberid in (${ids})
+    </delete>
+    <select id="getMemberById" resultType="com.jk.pojo.Member"  parameterType="Integer">
+        select * from t_member where memberid = #{id}
+    </select>
+    <insert id="addMember" parameterType="com.jk.pojo.Member">
+        insert into t_member(membernum,membername,memberdj,memberjf,memberflag,memberdate,membersex,memberphone,memberidcard) values(
+        #{membernum},
+        #{membername},
+        #{memberdj},
+        #{memberjf},
+        #{memberflag},
+        #{memberdate},
+        #{membersex},
+        #{memberphone},
+        #{memberidcard})
+    </insert>
+    <update id="modifyMember" parameterType="com.jk.pojo.Member">
+        update t_member
+        set membernum = #{membernum},
+        membername= #{membername},
+        memberdj =#{memberdj},
+        memberjf=#{memberjf},
+        memberflag=#{memberflag},
+        memberdate =#{memberdate},
+        membersex =#{membersex},
+        memberphone =#{memberphone},
+        memberidcard =#{memberidcard}
+        where memberid = #{memberid}
+    </update>
 </mapper>

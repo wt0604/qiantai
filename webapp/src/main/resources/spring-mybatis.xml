@@ -68,17 +68,20 @@
         <property name="numHelperThreads">  
             <value>${c3p0.numHelperThreads}</value>  
         </property>  
-    </bean>  
+    </bean>
 
 	<!--配置sessionfactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 在控制台上，或者是在日志文件中输出打印sql -->
 		<property name="configLocation" value="classpath:mybatis-showSQL.xml"></property>
-		<!-- 自动扫描mapping.xml文件 -->
-		<property name="mapperLocations" value="classpath:com/jk/mapper/*.xml"></property>
-	</bean>
+		<!--&lt;!&ndash; 自动扫描mapping.xml文件 &ndash;&gt;
+		<property name="mapperLocations" value="classpath:com/jk/mapper/*.xml"></property>-->
 
+		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
+		<property name="mapperLocations" value="classpath:mapper/*.xml" />
+
+	</bean>
 	<!-- 装配dao接口 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.jk.dao.**" /> <!-- DAO接口所在包名，Spring会自动查找其下的类 -->

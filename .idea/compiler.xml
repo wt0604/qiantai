@@ -13,12 +13,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="parent" target="1.7" />
-      <module name="ThreeTeam2" target="1.7" />
-      <module name="util" target="1.7" />
+      <module name="parent" target="1.5" />
+      <module name="ThreeTeam2" target="1.5" />
+      <module name="util" target="1.5" />
       <module name="webapp" target="1.7" />
-      <module name="wt" target="1.7" />
-      <module name="xt" target="1.7" />
+      <module name="wt" target="1.6" />
+      <module name="xt" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
