@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="util" />
+        <module name="webapp" />
+        <module name="wt" />
+        <module name="xt" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="parent" target="1.7" />
+      <module name="ThreeTeam2" target="1.7" />
+      <module name="util" target="1.7" />
+      <module name="webapp" target="1.7" />
+      <module name="wt" target="1.7" />
+      <module name="xt" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
