@@ -15,4 +15,8 @@ public class GzwController {
     public Map<String, Object> getInfoAll(){
         return null;
     }
+
+    public void add(){
+
+    }
 }
